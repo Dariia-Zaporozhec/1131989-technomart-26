@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Daria AS](https://up.htmlacademy.ru/htmlcss/26/user/1131989).
-* Наставник: `Неизвестно`.
+* Наставник: [Антон Игнатенко](https://htmlacademy.ru/profile/id987931)
 
 ---
 
