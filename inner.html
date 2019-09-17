@@ -21,10 +21,8 @@
           </svg>
         </a>
         <form method="post" action=""https://echo.htmlacademy.ru">
-          <p>
             <label for="search-field">Поиск</label>
             <input type="search" name="search" id="search-field">
-          </p>
         </form>
         <ul>
           <li>
@@ -79,7 +77,7 @@
           <legend>Цена</legend>
           <input type="range" min="0" max="3000">
           <output name="min-price">1</output>
-          <p>-</p>
+          <span>-</span>
           <output name="max-price">3000</output>
         </fieldset>
         <fieldset>
@@ -110,35 +108,37 @@
           <legend>Питание</legend>
           <ul>
             <li>
-              <input type="radio" name="power" id="battery-field" checked>
+              <input type="radio" name="power" id="battery-field" value="battery" checked>
               <label for="battery-field">Аккумуляторные</label>
             </li>
             <li>
-              <input type="radio" name="power" id="network-field">
+              <input type="radio" name="power" id="network-field" value="network">
               <label for="network-field">Сетевые</label>
             </li>
           </ul>
         </fieldset>
-        <button type="button">Показать</button>
+        <button type="submit">Показать</button>
       </form>
-      <h3>Сортировка</h3>
-      <ul>
-        <li>
-          <a href="">по цене</a>
-        </li>
-        <li>
-          <a href="" по типу></a>
-        </li>
-        <li>
-          <a href=""> по функционалу</a>
-        </li>
-        <li>
-          <a href="">по возростанию</a>
-        </li>
-        <li>
-          <a href="">по убыванию</a>
-        </li>
-      </ul>
+      <div>
+        <h3>Сортировка</h3>
+        <ul>
+          <li>
+            <a href="">по цене</a>
+          </li>
+          <li>
+            <a href="" по типу></a>
+          </li>
+          <li>
+            <a href=""> по функционалу</a>
+          </li>
+          <li>
+            <a href="">по возростанию</a>
+          </li>
+          <li>
+            <a href="">по убыванию</a>
+          </li>
+        </ul>
+    </div>
     </section>
     <section>
       <h2 class="visually-hidden">Товары</h2>
@@ -340,8 +340,8 @@
     <h2>Товар добавлен в корзину!</h2>
     <button type="button">Закрыть</button>
     <div>
-      <button type="submit">Оформить заказ</button>
-      <button type="button">Продолжить покупки</button>
+      <a href="">Оформить заказ</a>
+      <a href="inner.html">Продолжить покупки</a>
     </div>
   </section>
  </body>
