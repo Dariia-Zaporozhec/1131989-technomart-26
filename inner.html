@@ -9,7 +9,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header>
+    <header class="header">
       <section class="user-menu">
         <a class="logo" href="index.html">
           <svg xmlns="http://www.w3.org/2000/svg" width="108" height="18" viewBox="0 0 108 18">
@@ -40,7 +40,7 @@
           </li>
         </ul>
       </section>
-      <section class="header">
+      <section class="header-wrapper">
         <p class="header-description">Интернет-магазин
            строительных материалов
             и инструментов для ремонта</p>
@@ -49,33 +49,35 @@
         <span class="header-address">г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8</span>
       </div>
           <ul class="user">
-            <li><a class="name" href="">Равшан Джамшутович</a></li>
-            <li><a class="user-link" href="">Мои заказы</a></li>
-            <li><a class="user-link" href="">Личный кабинет</a></li>
+            <li class="user-item"><a class="name" href="">Равшан Джамшутович</a></li>
+            <li class="user-item"><a class="user-link" href="">Мои заказы</a></li>
+            <li class="user-item"><a class="user-link" href="">Личный кабинет</a></li>
          </ul>
       </section>
       <nav>
         <h2 class="visually-hidden ">Навигация по сайту Техномарт</h2>
        <ul class="main-menu-list">
-         <li class="main-menu-link"><a href="/">Главная</a></li>
-         <li class="main-menu-link"><a href="">Компания</a></li>
-         <li class="main-menu-link"><a href="inner.html">Каталог</a></li>
-         <li class="main-menu-link"><a href="">Новости</a></li>
-         <li class="main-menu-link"><a href="">Спецпредложения</a></li>
-         <li class="main-menu-link"><a href="">Доставка</a></li>
-         <li class="main-menu-link"><a href="">Контакты</a></li>
+         <li class="main-menu-item"><a href="/">Главная</a></li>
+         <li class="main-menu-item"><a href="">Компания</a></li>
+         <li class="main-menu-item"><a href="inner.html">Каталог</a></li>
+         <li class="main-menu-item"><a href="">Новости</a></li>
+         <li class="main-menu-item"><a href="">Спецпредложения</a></li>
+         <li class="main-menu-item"><a href="">Доставка</a></li>
+         <li class="main-menu-item"><a href="">Контакты</a></li>
        </ul>
      </nav>
     </header>
    <main class="inner">
+     <div class="main-wrapper">
        <ul class="nav-list">
          <li class="nav-items"><a class="icon-house" href="index.html">Главная</a></li>
          <li class="nav-items"><a  class="arrow" href="/">Каталог</a></li>
          <li class="nav-items"><a class="arrow" href="">Инструмент</a></li>
          <li class="nav-items"><a class="arrow" href="">Перфораторы</a></li>
        </ul>
+       <h1 class="title">Перфораторы</h1>
+      <div class="box-filters-products">
     <section class="filters">
-      <h1>Перфораторы</h1>
       <h2>Фильтр</h2>
       <form method="get" action=""https://echo.htmlacademy.ru">
       <fieldset>
@@ -130,7 +132,7 @@
         </fieldset>
         <button class="filter-button" type="submit">Показать</button>
       </form>
-      <div>
+      <div class="sorting">
         <h3>Сортировка</h3>
         <ul>
           <li>
@@ -288,7 +290,7 @@
         </li>
       </ul>
     </section>
-    <div>
+    <div class="pages">
       <ul class="pages-list">
         <li class="pages-items"><a href="">1</a></li>
         <li class="pages-items"><a href="">2</a></li>
@@ -296,6 +298,7 @@
         <li class="pages-items"><a href="">Следующая</a></li>
       </ul>
     </div>
+</div>
     <article class="main-article">
       <h2>Пара слов о перфораторах</h2>
       <p>Перфоратор — универсальный строительный инструмент.
@@ -308,23 +311,23 @@
   </main>
   <footer>
     <section class="footer-menu">
-      <a class="logo" href="index.html">
-        <img src="img/logo.svg" alt="Логотип Техномарт">
+      <a class="footer-logo" href="index.html">
+        <img src="img/footer-logo.svg" alt="Логотип Техномарт">
       </a>
       <ul class="footer-menu-list">
-        <li class="footer-menu-link" ><a href="">Компания</a></li>
-        <li><a href="">Новости</a></li>
-        <li><a href="inner.html">Каталог</a></li>
-        <li><a href="">Доставка</a></li>
-        <li><a href="">Контакты</a></li>
+        <li class="footer-menu-item" ><a href="">Компания</a></li>
+        <li class="footer-menu-item"><a href="">Новости</a></li>
+        <li class="footer-menu-item"><a href="inner.html">Каталог</a></li>
+        <li class="footer-menu-item"><a href="">Доставка</a></li>
+        <li class="footer-menu-item"><a href="">Контакты</a></li>
       </ul>
-      </section>
-      <section class="footer-catalog">
+    </section>
+    <section class="footer-catalog">
       <ul class="footer-catalog-list">
-        <li class="footer-catalog-link"><a href="">Материалы</a></li>
-        <li class="footer-catalog-link"><a href="">Техника</a></li>
-        <li class="footer-catalog-link"><a href="">Инструмент</a></li>
-        <li class="footer-catalog-link"><a href="">Спецпредложения</a></li>
+        <li class="footer-catalog-item"><a href="">Материалы</a></li>
+        <li class="footer-catalog-item"><a href="">Техника</a></li>
+        <li class="footer-catalog-item"><a href="">Инструмент</a></li>
+        <li class="footer-catalog-item"><a href="">Спецпредложения</a></li>
       </ul>
       <div class="footer-contacts">
         <span>г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8</span>
@@ -339,10 +342,12 @@
         <li class="social-networks-item"><a  class="social-networks-link fb" href="">FBФ</a></li>
         <li class="social-networks-item"><a class="social-networks-link insta" href="">INST</a></li>
       </ul>
-      <p class="feedback">Обратная связь:<br>
-      <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
-      <p class="designed">Разроботано -
-      <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
+      <div class="wrapper-copyright">
+        <p class="feedback">Обратная связь:<br>
+        <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+        <p class="designed">Разроботано -
+        <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
+      </div>
     </div>
   </footer>
   <section class="visually-hidden">
