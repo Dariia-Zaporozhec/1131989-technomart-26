@@ -8,7 +8,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header>
+    <header class="header">
       <section class="user-menu">
         <a class="logo" href="/" >
           <svg xmlns="http://www.w3.org/2000/svg" width="108" height="18" viewBox="0 0 108 18">
@@ -24,8 +24,8 @@
           </svg>
         </a>
         <form class="user-menu-search" method="post" action=""https://echo.htmlacademy.ru">
-            <label for="search-field">Поиск</label>
-            <input class="visually-hidden" type="search" name="search" id="search-field">
+          <input  type="search" name="search" id="search-field" placeholder="Перфоратор">
+          <label for="search-field">Поиск</label>
         </form>
         <ul class="user-menu-list">
           <li class="user-menu-item">
@@ -39,7 +39,7 @@
           </li>
         </ul>
       </section>
-      <section class="header">
+      <section class="header-wrapper">
         <p class="header-description">Интернет-магазин
            строительных материалов
             и инструментов для ремонта</p>
@@ -64,31 +64,44 @@
           <li class="main-menu-item"><a href="">Контакты</a></li>
         </ul>
       </nav>
-
     </header>
     <main>
-      <section>
-          <div>
-            <h2>Материалы</h2>
-            <a href="">На любой вкус</a>
-           <h2>Инструмент</h2>
-           <a href="На все случаи"></a>
-           <h2>Техника</h2>
-           <a href="Для стройки"></a>
+      <section class="main-range">
+          <div class="range-block1">
+            <div class="block materials">
+              <h2>Материалы</h2>
+              <a href="">На любой вкус</a>
+            </div>
+            <div class="block tools">
+              <h2>Инструмент</h2>
+              <a href="">На все случаи</a>
+            </div>
+            <div class="block technics">
+              <h2 >Техника</h2>
+              <a href="">Для стройки</a>
+            </div>
          </div>
-         <div>
-           <h2>Скидки 50%</h2>
-           <a href="">На 350 товаров</a>
-           <h2>Доставка</h2>
-           <a href="">Бесплатно</a>
-           <h2>ДРЕЛИ
-          <span>Соседям на радость!</span>
-          </h2>
-          <a href="inner.html">Открыть каталог</a>
-          <h2>ПЕРФОРАТОРЫ
-         <span>Настоящие мужские игрушки</span>
-         </h2>
-         <a href="inner.html">Открыть каталог</a>
+         <div class="range-block2">
+            <div class="block discounts">
+              <h2 >Скидки 50%</h2>
+              <a href="">На 350 товаров</a>
+            </div>
+            <div class="block delivery">
+              <h2 >Доставка</h2>
+              <a href="">Бесплатно</a>
+            </div>
+            <div>
+              <h2>ДРЕЛИ
+             <span>Соседям на радость!</span>
+             </h2>
+             <a href="inner.html">Открыть каталог</a>
+            </div>
+            <div>
+              <h2>ПЕРФОРАТОРЫ
+             <span>Настоящие мужские игрушки</span>
+             </h2>
+             <a href="inner.html">Открыть каталог</a>
+            </div>
        </div>
     <section>
       <div>
@@ -229,49 +242,51 @@
            сгоревший товар на новый.Дом уж восстановите как-нибудь сами.</p>
       </div>
     </section>
-    <section class="company">
-      <h2>Компания "Техномарт"</h2>
-      <p>Настоящий мужской шоппинг начинается здесь!
-         Огромный выбор товаров для ремонта и строительства
-         не оставит равнодушными любителей сэкономить на гастарбайтерах. </p>
-      <p>Мы можем доставить ваш товар в самые отдаленные точки России!
-      Техномарт работает со многими транспортными компаниями:</p>
-      <ul class="company-list">
-        <li>Деловые линии</li>
-        <li>Автодрейдинг</li>
-        <li>ЖелДорЭкспедиция</li>
-      </ul>
-      <a class="company-details" href="">Подробнее о компании</a>
-    </section>
-    <section class="contacts" >
-      <h2 >Контакты</h2>
-      <p>Вы можете забрать товар сами,
-          заехав в наш офис:</p>
-      <a href="https://goo.gl/maps/F8dHDxpJH5xpnynbA">
-        <img src="img/map.jpg" alt="Наш адрес ул. Большая Конюшенная,19" width="300" height="158">
-      </a>
-      <a  class="contacts-map" href="">Заблудились? Напишите нам!</a>
-    </section>
+    <div class="wrapper-company-contacts">
+      <section class="company">
+        <h2>Компания "Техномарт"</h2>
+        <p>Настоящий мужской шоппинг начинается здесь!
+           Огромный выбор товаров для ремонта и строительства
+           не оставит равнодушными любителей сэкономить на гастарбайтерах. </p>
+        <p>Мы можем доставить ваш товар в самые отдаленные точки России!
+        Техномарт работает со многими транспортными компаниями:</p>
+        <ul class="company-list">
+          <li>Деловые линии</li>
+          <li>Автодрейдинг</li>
+          <li>ЖелДорЭкспедиция</li>
+        </ul>
+        <a class="company-details" href="">Подробнее о компании</a>
+      </section>
+      <section class="contacts" >
+        <h2 >Контакты</h2>
+        <p>Вы можете забрать товар сами,
+            заехав в наш офис:</p>
+        <a href="https://goo.gl/maps/F8dHDxpJH5xpnynbA">
+          <img src="img/map.jpg" alt="Наш адрес ул. Большая Конюшенная,19" width="300" height="158">
+        </a>
+        <a  class="contacts-map" href="">Заблудились? Напишите нам!</a>
+      </section>
+    </div>
     </main>
     <footer>
       <section class="footer-menu">
-        <a class="logo" href="index.html">
-          <img src="img/logo.svg" alt="Логотип Техномарт">
+        <a class="footer-logo" href="index.html">
+          <img src="img/footer-logo.svg" alt="Логотип Техномарт">
         </a>
         <ul class="footer-menu-list">
-          <li class="footer-menu-link" ><a href="">Компания</a></li>
-          <li><a href="">Новости</a></li>
-          <li><a href="inner.html">Каталог</a></li>
-          <li><a href="">Доставка</a></li>
-          <li><a href="">Контакты</a></li>
+          <li class="footer-menu-item" ><a href="">Компания</a></li>
+          <li class="footer-menu-item"><a href="">Новости</a></li>
+          <li class="footer-menu-item"><a href="inner.html">Каталог</a></li>
+          <li class="footer-menu-item"><a href="">Доставка</a></li>
+          <li class="footer-menu-item"><a href="">Контакты</a></li>
         </ul>
         </section>
         <section class="footer-catalog">
         <ul class="footer-catalog-list">
-          <li class="footer-catalog-link"><a href="">Материалы</a></li>
-          <li class="footer-catalog-link"><a href="">Техника</a></li>
-          <li class="footer-catalog-link"><a href="">Инструмент</a></li>
-          <li class="footer-catalog-link"><a href="">Спецпредложения</a></li>
+          <li class="footer-catalog-item"><a href="">Материалы</a></li>
+          <li class="footer-catalog-item"><a href="">Техника</a></li>
+          <li class="footer-catalog-item"><a href="">Инструмент</a></li>
+          <li class="footer-catalog-item"><a href="">Спецпредложения</a></li>
         </ul>
         <div class="footer-contacts">
           <span>г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8</span>
