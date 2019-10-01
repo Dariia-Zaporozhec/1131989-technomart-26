@@ -83,14 +83,16 @@
             </div>
          </div>
          <div class="range-block2">
-            <div class="block discounts">
-              <h2 >Скидки 50%</h2>
-              <a href="">На 350 товаров</a>
-            </div>
-            <div class="block delivery">
-              <h2 >Доставка</h2>
-              <a href="">Бесплатно</a>
-            </div>
+           <div class="block-wrap">
+             <div class="block discounts">
+               <h2 >Скидки 50%</h2>
+               <a href="">На 350 товаров</a>
+             </div>
+             <div class="block delivery">
+               <h2 >Доставка</h2>
+               <a href="">Бесплатно</a>
+             </div>
+           </div>
             <div class="sliders drill">
               <h2>ДРЕЛИ
                 <span>Соседям на радость!</span>
@@ -104,13 +106,13 @@
                <a href="inner.html">Открыть каталог</a>
             </div>
        </div>
-    <section>
+    </section>
       <div class="box-popular">
         <h2>Популярные товары:</h2>
         <a class="link-popular" href="">Все популярные товары</a>
       </div>
       <div class="box-products">
-      <ul class="products-list ">
+      <ul class="products-popular ">
         <li class="products-item">
           <h3>
             <span>Перфоратор Bosch</span>
@@ -171,7 +173,7 @@
          </div>
         </li>
       </ul>
-    </section>
+    </div>
     <section>
       <div class="box-popular">
         <h2>Популярные производители:</h2>
@@ -221,26 +223,32 @@
       </ul>
     </section>
     <section class="services">
-      <h2>Сервисы</h2>
-      <p>Хороший интернет-магазин отличается от плохого не только ценами!
+      <h2 class="caption-services">Сервисы</h2>
+      <p class="desc">Хороший интернет-магазин отличается от плохого не только ценами!
          Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-
       <div class="blocks-services">
-
-        <div class="service-delivery">
-          <h2>Доставка</h2>
-          <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
-           Ведь мы неплохо зарабатываем, поднимая его на ваш этаж!</p>
+        <input class="tabs-input btn-1" type="radio" id="btn-1" name="tab" value="tab-1" checked>
+        <input class="tabs-input btn-2" type="radio" id="btn-2" name="tab" value="tab-2">
+        <input class="tabs-input btn-3" type="radio" id="btn-3" name="tab" value="tab-3">
+        <div class="tabs-buttons">
+          <label class="tabs-button" for="btn-1" tabindex="0">Доставка</label>
+          <label class="tabs-button" for="btn-2" tabindex="0">Гарантия</label>
+          <label class="tabs-button" for="btn-3" tabindex="0">Кредит</label>
         </div>
-        <div class="service-credit">
-          <h2>Кредит</h2>
-          <p>Залезть в долговую яму столо проще!
+        <div class="tab service-delivery">
+            <h2 class="title-service">Доставка</h2>
+            <p class="desc">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
+             Ведь мы неплохо зарабатываем, поднимая его на ваш этаж!</p>
+        </div>
+        <div class="tab service-credit">
+          <h2 class="title-service">Кредит</h2>
+          <p class="desc ">Залезть в долговую яму столо проще!
               Кредитные консультанты придут вам на помощь.</p>
           <a href="">Отправить заявку</a>
         </div>
-        <div class="service-garantion">
-          <h2>Гарантия</h2>
-          <p>Если купленный у нас товар поломается или заискрит,
+        <div class=" tab service-garantion">
+          <h2 class="title-service">Гарантия</h2>
+          <p class="desc">Если купленный у нас товар поломается или заискрит,
             а  также в случае пожара, спровоцированного его возгоранием,
             вы всегда можете быть уверены в нашей гарантии. Мы обменяем
              сгоревший товар на новый.Дом уж восстановите как-нибудь сами.</p>
