@@ -31,7 +31,6 @@ body {
 }
 .user-menu {
   display: flex;
-  min-height: 42px;
   padding-left: calc(50% - 470px);
   padding-right: calc(50% - 470px);
   background-color:#293449;
@@ -90,6 +89,7 @@ body {
   display: flex;
   padding: 0;
   margin: 0;
+  padding-left: 20px;
   list-style:none;
   color:#ffffff;
   font-size: 17px;
@@ -186,11 +186,13 @@ background-color:#212a3a;
 }
 .header-wrapper {
   display: flex;
-  padding-top: 46px;
+  align-items: flex-start;
+  margin-top: 46px;
   margin-right: calc(50% - 470px);
   margin-left: calc(50% - 470px);
 }
 .header-description {
+    display: block;
     padding-right: 71px;
     padding-left: 53px;
     width: 310px;
