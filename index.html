@@ -30,10 +30,10 @@
         </form>
         <ul class="user-menu-list">
           <li class="user-menu-item">
-            <a class="user-menu-link icon-bookmark" href="">Закладки:0</a>
+            <a class="user-menu-link icon-bookmark" href="">Закладки: 0</a>
           </li>
           <li class="user-menu-item"  >
-            <a class="user-menu-link icon-cart" href="">Корзина:0</a>
+            <a class="user-menu-link icon-cart" href="">Корзина: 0</a>
           </li>
           <li  class="user-menu-item">
             <a class="user-menu-link order" href="">Оформить заказ</a>
@@ -46,7 +46,7 @@
             и инструментов для ремонта</p>
         <div class="header-contacts">
           <a  class="header-tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
-          <span class="header-address">г.Санкт-Петербург, ул. Б.Конюшенная, д.19/8</span>
+          <span class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
        </div>
           <ul class="header-exit">
             <li class="exit-item"><a class="exit-link icon-exit" href="">Войти</a></li>
@@ -93,6 +93,13 @@
                <a href="">Бесплатно</a>
              </div>
            </div>
+           <div class="sliders-block">
+             <input class="tabs-input" type="radio" id="sld-1" name="slide" value="slider1" checked>
+             <input class="tabs-input" type="radio" id="sld-2" name="slide" value="slider2">
+             <div class="sliders-labels">
+               <label class="sld1-button" for="sld-1" tabindex="0"></label>
+               <label class="sld2-button" for="sld-2" tabindex="0"></label>
+             </div>
             <div class="sliders drill">
               <h2>ДРЕЛИ
                 <span>Соседям на радость!</span>
@@ -105,6 +112,7 @@
               </h2>
                <a href="inner.html">Открыть каталог</a>
             </div>
+          </div>
        </div>
     </section>
       <div class="box-popular">
@@ -114,59 +122,58 @@
       <div class="box-products">
       <ul class="products-popular ">
         <li class="products-item">
-          <h3>
-            <span>Перфоратор Bosch</span>
-            <span>BFG 9000</span>
-          </h3>
           <div class="product-img">
               <img src="img/perforator_1.jpg" alt="Перфаратор Bosch BFG 9000" width="218" height="170">
           </div>
-          <span class="old-price">32500 p.</span>
-          <span class="price">25500 p.</span>
+          <h3> Перфоратор BOSCH BFG 9000 </h3>
+          <span class="old-price">32500 P.</span>
+          <span class="price">25500 P.</span>
           <div class="product-link">
             <a class="link-buy" href="">Купить</a>
             <a class="link-bookmark" href="">В закладки</a>
          </div>
        </li>
        <li class="products-item">
-         <h3>
-             <span>Перфаратор Bosch</span>
-             <span>BFG 3000</span>
-         </h3>
          <div class="product-img">
              <img src="img/perforator_2.jpg" alt="Перфаратор Bosch BFG 3000" width="218" height="170">
         </div>
-        <span class="old-price">22500 p.</span>
-        <span class="price">15500 p.</span>
+          <h3>
+              <span>Перфаратор BOSCH</span>
+              <span>BFG 3000</span>
+          </h3>
+        <span class="old-price">22500 P.</span>
+        <span class="price">15500 P.</span>
         <div class="product-link">
           <a class="link-buy" href="">Купить</a>
           <a class="link-bookmark" href="">В закладки</a>
        </div>
      </li>
         <li class="products-item">
-          <h3>
-              <span>Перфаратор Bosch</span>
-              <span>BFG 6000</span>
-          </h3>
           <div class="product-img">
               <img src="img/perforator-3.jpg" alt="Перфаратор Bosch BFG 6000" width="218" height="170">
          </div>
-         <span class="old-price">30500 p.</span>
-         <span class="price">25500 p.</span>
-         <div>
+         <h3>
+             <span>Перфаратор BOSCH</span>
+             <span>BFG 6000</span>
+         </h3>
+         <span class="old-price">30500 P.</span>
+         <span class="price">25500 P.</span>
+        <div class="product-link">
          <a class="link-buy" href="">Купить</a>
          <a  class="link-bookmark"href="">В закладки</a>
          </div>
         </li>
         <li class="products-item">
-          <h3>
-              <span>Перфаратор Bosch</span>
-              <span>BFG 2000</span>
-          </h3>
-          <div class="product-img">
+          <div class="new"></div>
+          <div class="product-img ">
               <img src="img/perforator_2.jpg" alt="Перфаратор Bosch BFG 2000" width="218" height="170">
          </div>
-         <span class="price">12500 p.</span>
+         <h3>
+             <span>Перфаратор BOSCH</span>
+             <span>BFG 2000</span>
+         </h3>
+         <span class="old-price transparent">ЦЕНА БЕЗ СКИДКИ</span>
+         <span class="price">12500 P.</span>
          <div class="product-link">
          <a class="link-buy" href="">Купить</a>
          <a class="link-bookmark" href="">В закладки</a>
@@ -238,7 +245,14 @@
         <div class="tab service-delivery">
             <h2 class="title-service">Доставка</h2>
             <p class="desc">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
-             Ведь мы неплохо зарабатываем, поднимая его на ваш этаж!</p>
+             Ведь мы неплохо зарабатываем, <br> поднимая его на ваш этаж!</p>
+        </div>
+        <div class=" tab service-garantion">
+          <h2 class="title-service">Гарантия</h2>
+          <p class="desc">Если купленный у нас товар поломается или заискрит,<br>
+            а  также в случае пожара, спровоцированного его возгоранием,
+            вы всегда можете быть уверены в нашей гарантии. Мы обменяем
+             сгоревший товар на новый. <br> Дом уж восстановите как-нибудь сами.</p>
         </div>
         <div class="tab service-credit">
           <h2 class="title-service">Кредит</h2>
@@ -246,22 +260,15 @@
               Кредитные консультанты придут вам на помощь.</p>
           <a href="">Отправить заявку</a>
         </div>
-        <div class=" tab service-garantion">
-          <h2 class="title-service">Гарантия</h2>
-          <p class="desc">Если купленный у нас товар поломается или заискрит,
-            а  также в случае пожара, спровоцированного его возгоранием,
-            вы всегда можете быть уверены в нашей гарантии. Мы обменяем
-             сгоревший товар на новый.Дом уж восстановите как-нибудь сами.</p>
-        </div>
       </div>
     </section>
     <div class="wrapper-company-contacts">
       <section class="company">
-        <h2>Компания "Техномарт"</h2>
+        <h2>Компания «Техномарт»</h2>
         <p>Настоящий мужской шоппинг начинается здесь!
            Огромный выбор товаров для ремонта и строительства
            не оставит равнодушными любителей сэкономить на гастарбайтерах. </p>
-        <p>Мы можем доставить ваш товар в самые отдаленные точки России!
+        <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
         Техномарт работает со многими транспортными компаниями:</p>
         <ul class="company-list">
           <li>Деловые линии</li>
@@ -307,18 +314,18 @@
         </div>
       </section>
       <div class="copyright">
-        <p>&copy; 2010-2019 Компания "Техномарт"<br>
+        <p>&copy; 2010-2019 Компания «Техномарт»
             Все права защищены</p>
         <ul class="social-networks">
-          <li class="social-networks-item"><a class="social-networks-link vk" href="">V K</a></li>
-          <li class="social-networks-item"><a  class="social-networks-link fb" href="">FBФ</a></li>
-          <li class="social-networks-item"><a class="social-networks-link insta" href="">INST</a></li>
+          <li class="social-networks-item"><a class="vk" href="">V K</a></li>
+          <li class="social-networks-item"><a  class=" fb" href="">FBФ</a></li>
+          <li class="social-networks-item"><a class=" insta" href="">INST</a></li>
         </ul>
         <div class="wrapper-copyright">
-          <p class="feedback">Обратная связь:<br>
-          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
-          <p class="feedback">Разроботано -
-          <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
+          <p>Обратная связь:
+            <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+          <p>Разроботано -
+            <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
         </div>
       </div>
     </footer>

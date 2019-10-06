@@ -30,10 +30,10 @@
         </form>
         <ul class="user-menu-list">
           <li class="user-menu-item">
-            <a class="user-menu-link icon-bookmark" href="">Закладки:0</a>
+            <a class="user-menu-link icon-bookmark" href="">Закладки: 0</a>
           </li>
           <li class="user-menu-item">
-            <a class=" cart" href="">Корзина:10</a>
+            <a class=" cart" href="">Корзина: 10</a>
           </li>
           <li  class="user-menu-item">
             <a class="user-menu-link order" href="">Оформить заказ</a>
@@ -81,15 +81,15 @@
       <form method="get" action=""https://echo.htmlacademy.ru">
       <fieldset class="filter-price">
         <legend>Цена:</legend>
-        <div>
-          <button type="button"></button>
-          <button type="button"></button>
-          <div></div>
-          <div></div>
+        <div class="range-price">
+          <button class="toggle min-price" type="button"></button>
+          <button class="toggle max-price" type="button"></button>
+          <div class="scale"></div>
+          <div class="scale-after"></div>
         </div>
-        <input type="number" readonly value="1">
+        <input class="min-numder" type="number" readonly value="1">
         <span>-</span>
-        <input type="number" readonly value="3000">
+        <input class="max-number" type="number" readonly value="3000">
       </fieldset>
         <fieldset class="filter-prodaction">
           <legend>Производители:</legend>
@@ -194,6 +194,7 @@
           <div class="product-img">
               <img src="img/perforator_2.jpg" alt="Перфаратор Bosch BFG 2000" width="218" height="170">
          </div>
+         <span class="old-price transparent">ЦЕНА БЕЗ СКИДКИ</span>
          <span class="price">12500 p.</span>
          <div class="product-link">
          <a class="link-buy" href="">Купить</a>
@@ -238,6 +239,7 @@
           <div class="product-img">
               <img src="img/perforator-3.jpg" alt="Перфаратор Bosch BFG 2000" width="218" height="170">
          </div>
+         <span class="old-price transparent">ЦЕНА БЕЗ СКИДКИ</span>
          <span class="price">12500 p.</span>
          <div class="product-link">
          <a class="link-buy" href="">Купить</a>
@@ -282,6 +284,7 @@
           <div class="product-img">
               <img src="img/perforator_2.jpg" alt="Перфаратор Bosch BFG 2000" width="218" height="170">
          </div>
+         <span class="old-price transparent">ЦЕНА БЕЗ СКИДКИ</span>
          <span class="price">12500 p.</span>
          <div class="product-link">
          <a class="link-buy" href="">Купить</a>
