@@ -483,9 +483,9 @@ background-repeat:no-repeat;
   background-color: rgba(0,0,0,0.3);
 }
 .materials {
-  background-image: url(../img/new.png), url(../img/icon-1.svg);
+  background-image: url(../img/icon-1.svg);
   background-repeat: no-repeat;
-  background-position:  top right, 213px 33px;
+  background-position: 213px 33px;
   background-color: #ffbf47;
 }
 .tools {
@@ -1140,47 +1140,29 @@ line-height: calc(20/18);
   background-repeat: no-repeat;
   opacity: 0.3;
 }
-.label-production:hover::before ,
-.label-production:focus::before {
-  opacity: 0.6;
-}
-#bosch-field:checked ~ .label-production::before,
-#interckol-field:checked ~ .label-production::before,
-#makita-field:checked ~ .label-production::before,
-#dewalt-field:checked ~ .label-production::before,
-#hitachi-field:checked ~ .label-production::before {
+
+.filter-production-items input:checked ~ .label-production::before {
   content: "";
   position: absolute;
-  left: 1px;
   width: 27px;
   height: 23px;
   background-image: url(../img/checkbox-on.svg);
   background-repeat: no-repeat;
   opacity: 0.3;
 }
-#bosch-field:checked ~ .label-production:hover::before,
-#interckol-field:checked ~ .label-production:hover::before,
-#makita-field:checked ~ .label-production:hover::before,
-#dewalt-field:checked ~ .label-production:hover::before,
-#hitachi-field:checked ~ .label-production:hover::before,
-#bosch-field:checked ~ .label-production:focus::before,
-#interckol-field:checked ~ .label-production:focus::before,
-#makita-field:checked ~ .label-production:focus::before,
-#dewalt-field:checked ~ .label-production:focus::before,
-#hitachi-field:checked ~ .label-production:focus::before,
-#battery-field:checked ~ .label-power:hover::before ,
-#network-field:checked ~ .label-power:hover::before ,
-#battery-field:checked ~ .label-power:focus::before ,
-#network-field:checked ~ .label-power:focus::before {
+
+.filter-production-items input:checked:focus ~ .label-production::before,
+.filter-production-items input:focus ~ .label-production::before,
+.filter-production-items input ~ .label-production:hover::before,
+.filter-production-items input:checked ~ .label-production:hover::before,
+.power-items input:focus ~ .label-power::before,
+.power-items input:checked:focus ~ .label-power::before,
+.power-items input ~ .label-power:hover::before,
+.power-items input:checked ~ .label-power:hover::before
+{
   opacity: 0.6;
 }
-#bosch-field:disabled ~ .label-production::before,
-#interckol-field:disabled ~ .label-production::before,
-#makita-field:disabled ~ .label-production::before,
-#dewalt-field:disabled ~ .label-production::before,
-#hitachi-field:disabled ~ .label-production::before,
-#battery-field:disabled ~ .label-power::before ,
-#network-field:disabled ~ .label-power::before {
+.filter-production-items input:disabled ~ .label-production::before {
     opacity: 0.1;
 }
 .filter-power {
@@ -1201,11 +1183,9 @@ line-height: calc(20/18);
   background-repeat: no-repeat;
   opacity: 0.3;
 }
-#battery-field:checked ~ .label-power::before ,
-#network-field:checked ~ .label-power::before {
+.power-items input:checked ~ .label-power::before {
   content: "";
   position: absolute;
-  left: 1px;
   width: 25px;
   height: 25px;
   background-image: url(../img/radio-on.svg);
@@ -1220,6 +1200,29 @@ line-height: calc(20/18);
   background-color: #ffffff;
   border: 1px solid #c5c5c5;
   text-transform: uppercase;
+}
+.none {
+  position: absolute;
+  top: 0.7em;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  transform: translateY(-50%);
+  opacity: 0;
+  /*
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;*/
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
 }
 .sorting {
   display: flex;
@@ -1328,14 +1331,18 @@ padding-left: 18px;
   border: 1px solid #e5e5e5;
 }
 .new {
- position: absolute;
- top: -1px;
- right: -1px;
- width: 60px;
- height: 60px;;
- z-index: 1;
-background: url("../img/new.png") no-repeat;
-background-position: top right;
+ position: relative;
+}
+.new::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 60px;
+  height: 60px;
+  z-index: ;
+ background: url("../img/new.png") no-repeat;
+ background-position: top right;
 }
 .products-item h3 {
   margin: 0;
@@ -1385,6 +1392,10 @@ background-position: top right;
 .product-link {
   display: none;
   position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   z-index: 1;
   width: 218px;
   height: 164px;
