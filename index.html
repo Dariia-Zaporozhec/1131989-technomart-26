@@ -237,9 +237,9 @@
             <input class="tabs-input btn-2" type="radio" id="btn-2" name="tab" value="tab-2">
             <input class="tabs-input btn-3" type="radio" id="btn-3" name="tab" value="tab-3">
             <div class="tabs-buttons">
-              <label class="tabs-button" for="btn-1" tabindex="0">Доставка</label>
-              <label class="tabs-button" for="btn-2" tabindex="0">Гарантия</label>
-              <label class="tabs-button" for="btn-3" tabindex="0">Кредит</label>
+              <label class="tabs-button tabs-button-1" for="btn-1" tabindex="0">Доставка</label>
+              <label class="tabs-button tabs-button-2" for="btn-2" tabindex="0">Гарантия</label>
+              <label class="tabs-button tabs-button-3" for="btn-3" tabindex="0">Кредит</label>
             </div>
             <div class="tab service-delivery">
               <h2 class="title-service">Доставка</h2>
@@ -292,7 +292,7 @@
       <div class="wrap">
         <section class="footer-menu">
           <a class="footer-logo" href="index.html">
-            <img src="img/footer-logo.svg" alt="Логотип Техномарт">
+            <img src="img/footer-logo.svg" alt="Логотип Техномарт" width="140" height="22">
           </a>
           <ul class="footer-menu-list">
             <li class="footer-menu-item"><a href="#">Компания</a></li>
@@ -357,7 +357,7 @@
       </form>
       <button class=" entrance-button" type="button">Закрыть</button>
     </section>
-    <div class=" map-popup">
+    <div class="map-popup">
       <h2 class="visually-hidden">Карта</h2>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRltGPLCAxOTExODY!5e0!3m2!1suk!2sua!4v1571678016082!5m2!1suk!2sua"
@@ -386,141 +386,10 @@
       </form>
     </section>
 
-    <script>
-      var exitLink = document.querySelector(".exit");
-      var popupLogin = document.querySelector(".login-popup");
-      var formLogin = popupLogin.querySelector("form");
-      var nameInpt = popupLogin.querySelector("[id=name-id]");
-
-      exitLink.addEventListener('click', function(evt) {
-        evt.preventDefault();
-        popupLogin.classList.add("popup-show");
-        nameInpt.focus();
-      });
-
-      formLogin.addEventListener("submit", function(evt) {
-        if (!nameInpt.value) {
-          evt.preventDefault();
-          popupLogin.classList.add("modal-error");
-        }
-      });
-
-      window.addEventListener("keydown", function(evt) {
-        if (evt.keyCode === 27) {
-          evt.preventDefault();
-          if (popupLogin.classList.contains("popup-show")) {
-            popupLogin.classList.remove("popup-show");
-            popupLogin.classList.remove("modal-error");
-          }
-        }
-      });
-    </script>
-    <script>
-      var linkContacts = document.querySelector(".contacts-map");
-      var popupContacts = document.querySelector(".feedback-popup");
-      var closeButton = popupContacts.querySelector(".entrance-button");
-
-      var formContucts = popupContacts.querySelector("form");
-      var nameInput = popupContacts.querySelector("[id=name-field]");
-      var emailInput = popupContacts.querySelector("[id=email-field]");
-
-      var isStorageSupport = true;
-      var storage = "";
-
-      try {
-        storage = localStorage.getItem("emailInput");
-      } catch (err) {
-        isStorageSupport = false;
-      }
-      linkContacts.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        popupContacts.classList.add("popup-show");
-
-        if (storage) {
-          emailInput.value = storage;
-        }
-
-        nameInput.focus();
-      });
-
-      closeButton.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        popupContacts.classList.remove("popup-show");
-        popupContacts.classList.remove("modal-error");
-      });
-      formContucts.addEventListener("submit", function(evt) {
-        if (!nameInput.value || !emailInput.value) {
-          evt.preventDefault();
-          popupContacts.classList.add("modal-error");
-        } else {
-          if (isStorageSupport) {
-            localStorage.setItem("emailInput", emailInput.value);
-          }
-        }
-      });
-      window.addEventListener("keydown", function(evt) {
-        if (evt.keyCode === 27) {
-          evt.preventDefault();
-          if (popupContacts.classList.contains("popup-show")) {
-            popupContacts.classList.remove("popup-show");
-            popupContacts.classList.remove("modal-error");
-          }
-        }
-      });
-    </script>
-
-    <script>
-      var linkMap = document.querySelector(".map-link");
-      var popupMap = document.querySelector(".map-popup");
-      var closeButtonMap = popupMap.querySelector(".entrance-button");
-
-      linkMap.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        popupMap.classList.add("popup-show");
-      });
-
-      closeButtonMap.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        popupMap.classList.remove("popup-show");
-      });
-
-      window.addEventListener("keydown", function(evt) {
-        if (evt.keyCode === 27) {
-          evt.preventDefault();
-          if (popupMap.classList.contains("popup-show")) {
-            popupMap.classList.remove("popup-show");
-          }
-        }
-      });
-    </script>
-
-    <script>
-      var boxBuy = document.querySelector(".box-products");
-      var popupBasket = document.querySelector(".basket-popup");
-      var closeButtonBasket = popupBasket.querySelector(".entrance-button");
-
-      boxBuy.addEventListener('click', function(event) {
-        var target = event.target;
-
-        if (target.classList.contains('link-buy')) {
-          event.preventDefault();
-          popupBasket.classList.add('popup-show');
-        }
-      });
-
-      closeButtonBasket.addEventListener('click', function() {
-        popupBasket.classList.remove('popup-show');
-      });
-
-      window.addEventListener("keydown", function(evt) {
-        if (evt.keyCode === 27) {
-          evt.preventDefault();
-          if (popupBasket.classList.contains("popup-show")) {
-            popupBasket.classList.remove("popup-show");
-          }
-        }
-      });
-    </script>
+    <script src="js/login-popup.js"></script>
+    <script src="js/email-popup.js"></script>
+    <script src="js/map-popup.js"></script>
+    <script src="js/basket-index.js"></script>
 
   </body>
 

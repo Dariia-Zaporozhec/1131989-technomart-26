@@ -30,7 +30,7 @@
             </svg>
           </a>
           <form class="user-menu-search" method="post" action="https://echo.htmlacademy.ru">
-            <input type="search" name="search" id="search-field" placeholder="Поиск">
+            <input type="search" name="search" id="search-field" placeholder="Поиск:">
             <label class="search-label" for="search-field"></label>
           </form>
           <ul class="user-menu-list">
@@ -64,9 +64,9 @@
         <nav class="nav">
           <h2 class="visually-hidden ">Навигация по сайту Техномарт</h2>
           <ul class="main-menu-list">
-            <li class="main-menu-item"><a href="/">Главная</a></li>
+            <li class="main-menu-item"><a href="index.html">Главная</a></li>
             <li class="main-menu-item"><a href="#">Компания</a></li>
-            <li class="main-menu-item"><a href="inner.html">Каталог</a></li>
+            <li class="main-menu-item"><a href="/">Каталог</a></li>
             <li class="main-menu-item"><a href="#">Новости</a></li>
             <li class="main-menu-item"><a href="#">Спецпредложения</a></li>
             <li class="main-menu-item"><a href="#">Доставка</a></li>
@@ -148,7 +148,7 @@
             <h2>Сортировка:</h2>
             <ul class="sorting-list">
               <li class="sorting-items item1 ">
-                <a href="#">по цене</a>
+                <a class="sorting-active" href="#">по цене</a>
               </li>
               <li class="sorting-items item2">
                 <a href="#"> по типу</a>
@@ -156,11 +156,11 @@
               <li class="sorting-items item3">
                 <a href="#"> по функционалу</a>
               </li>
-              <li class="sorting-items item4">
-                <a class="more" href="#">по возрастанию</a>
+              <li class=" item4">
+                <a class="sorting-active" href="#">по возрастанию</a>
               </li>
-              <li class="sorting-items item5">
-                <a class="less" href="#">по убыванию</a>
+              <li class=" item5">
+                <a href="#">по убыванию</a>
               </li>
             </ul>
           </div>
@@ -205,7 +205,7 @@
               </li>
               <li class="products-item">
                 <div class="product-img">
-                  <img src="img/perforator-3.jpg" alt="Перфаратор BOSCH BFG 3000" width="218" height="170">
+                  <img src="img/perforator_2.jpg" alt="Перфаратор BOSCH BFG 3000" width="218" height="170">
                 </div>
                 <h3>Перфаратор BOSCH BFG 3000</h3>
                 <span class="old-price">22500 p.</span>
@@ -217,7 +217,7 @@
               </li>
               <li class="products-item new">
                 <div class="product-img">
-                  <img src="img/perforator_2.jpg" alt="Перфаратор BOSCH BFG 6000" width="218" height="170">
+                  <img src="img/perforator-3.jpg" alt="Перфаратор BOSCH BFG 6000" width="218" height="170">
                 </div>
                 <h3>Перфаратор BOSCH BFG 6000</h3>
                 <span class="old-price">30500 p.</span>
@@ -229,7 +229,7 @@
               </li>
               <li class="products-item">
                 <div class="product-img">
-                  <img src="img/perforator-3.jpg" alt="Перфаратор BOSCH BFG 2000" width="218" height="170">
+                  <img src="img/perforator_2.jpg" alt="Перфаратор BOSCH BFG 2000" width="218" height="170">
                 </div>
                 <h3>Перфаратор BOSCH BFG 2000</h3>
                 <span class="old-price transparent">ЦЕНА БЕЗ СКИДКИ</span>
@@ -280,7 +280,7 @@
         </div>
         <div class="pages">
           <ul class="pages-list">
-            <li class="pages-items"><a href="#">1</a></li>
+            <li class="pages-items "><a class="pages-active" href="#">1</a></li>
             <li class="pages-items"><a href="#">2</a></li>
             <li class="pages-items"><a href="#">3</a></li>
             <li class="pages-items"><a href="#">Следующая</a></li>
@@ -303,7 +303,7 @@
       <div class="wrap">
         <section class="footer-menu">
           <a class="footer-logo" href="index.html">
-            <img src="img/footer-logo.svg" alt="Логотип Техномарт">
+            <img src="img/footer-logo.svg" alt="Логотип Техномарт" width="140" height="22" >
           </a>
           <ul class="footer-menu-list">
             <li class="footer-menu-item"><a href="#">Компания</a></li>
@@ -354,33 +354,8 @@
       </div>
     </section>
 
-    <script>
-      var boxBuy = document.querySelector(".products");
-      var popupBasket = document.querySelector(".basket-popup");
-      var closeButtonBasket = popupBasket.querySelector(".entrance-button");
+    <script src="js/basket-popup.js"></script>
 
-      boxBuy.addEventListener('click', function(event) {
-        var target = event.target;
-
-        if (target.classList.contains('link-buy')) {
-          event.preventDefault();
-          popupBasket.classList.add('popup-show');
-        }
-      });
-
-      closeButtonBasket.addEventListener('click', function() {
-        popupBasket.classList.remove('popup-show');
-      });
-
-      window.addEventListener("keydown", function(evt) {
-        if (evt.keyCode === 27) {
-          evt.preventDefault();
-          if (popupBasket.classList.contains("popup-show")) {
-            popupBasket.classList.remove("popup-show");
-          }
-        }
-      });
-    </script>
   </body>
 
 </html>
