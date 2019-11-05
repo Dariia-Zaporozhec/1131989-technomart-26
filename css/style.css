@@ -432,12 +432,14 @@ a {
   background-repeat: no-repeat;
   opacity: 0.4;
 }
+
 .logout {
   position: relative;
   padding-top: 30px;
   font-size: 0;
   color: transparent;
 }
+
 .logout::before {
   content: "";
   position: absolute;
@@ -926,6 +928,7 @@ a {
   display: block;
   object-fit: contain;
 }
+
 .services {
   font-family: "Cuprum", Arial, sans-serif;
   background-color: #f4f7f9;
@@ -1542,7 +1545,7 @@ input[type="number"]::-webkit-inner-spin-button {
   padding-left: 44px;
 }
 
-.item4 a{
+.item4 a {
   display: block;
   width: 15px;
   height: 15px;
@@ -1559,7 +1562,7 @@ input[type="number"]::-webkit-inner-spin-button {
   padding-left: 18px;
 }
 
-.item5 a{
+.item5 a {
   display: block;
   width: 15px;
   height: 15px;
@@ -1823,9 +1826,11 @@ input[type="number"]::-webkit-inner-spin-button {
   border: 1px solid #e5e5e5;
   border-radius: 3px;
 }
+
 .pages-items .pages-active {
-  color:#ffffff;
+  color: #ffffff;
 }
+
 .pages-active {
   border: solid 1px #ee3643;
   background-color: #ee3643;
